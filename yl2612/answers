@@ -1,0 +1,50 @@
+1. /usr/lib/python2.7/posixpath.py
+
+In [1]: import os
+
+In [2]: os.path.abspath?
+Type:       function
+String Form:<function abspath at 0x7fc71ae599b0>
+File:       /usr/lib/python2.7/posixpath.py
+Definition: os.path.abspath(path)
+Docstring:  Return an absolute path.
+
+2.
+In [3]: num=int(os.popen('ls /etc |wc -l').read())
+
+In [4]: num
+Out[4]: 234
+
+3. 15.297
+
+In [5]: import math
+
+In [7]: math.sqrt(num)
+Out[7]: 15.297058540778355
+
+4. x*x is the fastest.
+
+In [8]: x=12345
+
+In [9]: %timeit x**2
+10000000 loops, best of 3: 55.7 ns per loop
+
+In [10]: %timeit x*x
+10000000 loops, best of 3: 38.7 ns per loop
+
+In [11]: import numpy
+
+In [12]: %timeit numpy.square(x)
+1000000 loops, best of 3: 1.16 µs per loop
+
+5. 24 cell magic commands.
+
+In [13]: %lsmagic
+Out[13]: 
+Available line magics:
+%alias  %alias_magic  %autocall  %autoindent  %automagic  %bookmark  %cd  %colors  %config  %cpaste  %debug  %dhist  %dirs  %doctest_mode  %ed  %edit  %env  %gui  %hist  %history  %install_default_config  %install_ext  %install_profiles  %killbgscripts  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %lsmagic  %macro  %magic  %matplotlib  %notebook  %page  %paste  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %popd  %pprint  %precision  %profile  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset  %reset_selective  %run  %save  %sc  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos  %xdel  %xmode
+
+Available cell magics:
+%%!  %%HTML  %%SVG  %%bash  %%capture  %%debug  %%file  %%html  %%javascript  %%latex  %%perl  %%prun  %%pypy  %%python  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
+
+Automagic is ON, % prefix IS NOT needed for line magics.
